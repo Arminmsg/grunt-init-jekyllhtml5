@@ -1,0 +1,24 @@
+{
+  "name": "grunt-init-ht5jekyll",
+  "version": "1.0.0",
+  "description": "Jekyll with HTML5 Boilerplate and Grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arminmsg/grunt-init-html5jekyll"
+  },
+  "keywords": [
+    "HTML5",
+    "Boilerplate",
+    "Jekyll"
+  ],
+  "author": "Armin Mesic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arminmsg/grunt-init-html5jekyll/issues"
+  },
+  "homepage": "https://github.com/Arminmsg/grunt-init-html5jekyll"
+}
