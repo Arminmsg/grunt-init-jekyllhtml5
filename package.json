@@ -1,5 +1,5 @@
 {
-  "name": "grunt-init-ht5jekyll",
+  "name": "grunt-init-jekyllhtml5",
   "version": "1.0.0",
   "description": "Jekyll with HTML5 Boilerplate and Grunt",
   "main": "index.js",
@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/Arminmsg/grunt-init-html5jekyll/issues"
   },
-  "homepage": "https://github.com/Arminmsg/grunt-init-html5jekyll"
+  "homepage": "https://github.com/Arminmsg/grunt-init-html5jekyll",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-shell": "^1.1.1",
+    "load-grunt-tasks": "^0.6.0"
+  }
 }
