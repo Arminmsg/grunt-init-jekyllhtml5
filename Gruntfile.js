@@ -41,13 +41,25 @@ module.exports = function(grunt) {
                 ],
                 tasks: ["sass"]
             }
+        },
+        connect:{
+            server: {
+                options: {
+                    livereload: true,
+                    base: "_site/",
+                    port: 9000
+
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks("grunt-shell");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-sass");
+    grunt.loadNpmTasks("grunt-contrib-connect");
 
-    grunt.registerTask("default", ["shell"]);
+    grunt.registerTask("default", ["connect:server", "watch"]);
     grunt.registerTask("build", ["shell:jekyllBuild", "sass"]);
+    grunt.registerTask("runreload", ["connect", "watch"]);
 };
