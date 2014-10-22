@@ -13,7 +13,7 @@ module.exports = function(grunt) {
               style: 'expanded'
             },
             files: {
-              '_site/css/alter.css': 'css/main.scss',
+              '_site/css/main.css': 'sass/main.scss',
             }
           }
         },
@@ -33,6 +33,12 @@ module.exports = function(grunt) {
                     "index.html"
                 ], 
                 tasks: ["shell:jekyllBuild"]
+            },
+            css: {
+                files: [
+                    "sass/*.scss"
+                ],
+                tasks: ["sass"]
             }
         }
     });
