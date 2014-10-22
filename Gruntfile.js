@@ -10,10 +10,10 @@ module.exports = function(grunt) {
         sass: {
           dist: {
             options: {
-              style: 'compressed'
+              style: 'expanded'
             },
             files: {
-              'css/alter.css': 'css/main.scss',
+              '_site/css/alter.css': 'css/main.scss',
             }
           }
         },
