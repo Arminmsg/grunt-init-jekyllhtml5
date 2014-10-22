@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                     "_config.yml",
                     "index.html"
                 ], 
-                tasks: ["build"]
+                tasks: ["shell:jekyllBuild", "sass"]
             },
             css: {
                 files: [
@@ -59,7 +59,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-sass");
     grunt.loadNpmTasks("grunt-contrib-connect");
 
-    grunt.registerTask("default", ["connect:server", "watch"]);
-    grunt.registerTask("build", ["shell:jekyllBuild", "sass"]);
-    grunt.registerTask("runreload", ["connect", "watch"]);
+    grunt.registerTask("serve", ["connect:server", "watch"]);
 };
