@@ -13,7 +13,7 @@ module.exports = function(grunt) {
               style: 'expanded'
             },
             files: {
-              '_site/css/main.css': 'sass/main.scss',
+              '_site/css/main.css': '_sass/main.scss',
             }
           }
         },
@@ -32,11 +32,12 @@ module.exports = function(grunt) {
                     "_config.yml",
                     "index.html"
                 ], 
-                tasks: ["shell:jekyllBuild"]
+                tasks: ["build"]
             },
             css: {
                 files: [
-                    "sass/*.scss"
+                    "_sass/*.scss",
+                    "_sass/**/*.scss"
                 ],
                 tasks: ["sass"]
             }
@@ -48,4 +49,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-sass");
 
     grunt.registerTask("default", ["shell"]);
+    grunt.registerTask("build", ["shell:jekyllBuild", "sass"]);
 };
